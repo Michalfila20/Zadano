@@ -1,0 +1,40 @@
+// ConsoleApplication2.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+//
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, s = 0, temp;
+
+    cout << "Podaj ilosc liczb: ";
+    cin >> n;
+
+    if (n <= 0)
+    {
+        cout << "Liczba musi byc wieksza od zera";
+        return 0;
+    }
+    
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Liczba " << i + 1 << ":";
+        cin >> temp;
+
+        if (temp <= 0)
+        {
+            cout << "Liczba musi byc wieksza od zera" << endl;
+            i--;
+            continue;
+        }
+
+        if ((temp % 2) == 0)
+        {
+            s += temp;
+        }
+    }
+
+
+    cout << "Suma liczb parzystych wynosi: " << s;
+}
+

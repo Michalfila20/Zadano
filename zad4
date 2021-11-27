@@ -1,0 +1,33 @@
+// ConsoleApplication2.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+//
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int temp, su, sd, iu, id;
+    su = sd = iu = id = 0;
+    float r;
+
+    for (int i = 0; i < 10; i++)
+    {
+        cout << "Podaj " << i + 1 << " liczbe: ";
+        cin >> temp;
+        
+        if (temp >= 0)
+        {
+            sd += temp;
+            id++;
+        }
+        else {
+            su += temp;
+            iu++;
+        }
+    }
+
+    cout << "Ilosc dodatnich: " << id << endl;
+    cout << "Ilosc ujemnych: " << iu << endl;
+    cout << "Suma dodatnich: " << sd << endl;
+    cout << "Suma ujemnych: " << su;
+}
+

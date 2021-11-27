@@ -1,0 +1,36 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, i, temp;
+    float  s = 0;
+    cout << "Podaj liczbe studnetow :";
+    cin >> n;
+    i = n;
+
+    while (true)
+    {
+      
+        cout << "podaj liczbe punktow: ";
+        cin >> temp;
+        if (temp <= 100 && temp >= 0) {
+            s += temp;
+            i--;
+            if (i == 0) {
+                break;
+            }
+            continue;
+        }
+        else
+        {
+            cout << "Zła ilosc punktow" << endl;
+            break;
+        }
+        
+    };
+
+    cout << "Srednia: " << s / n;
+    
+}
+
